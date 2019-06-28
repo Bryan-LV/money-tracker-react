@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 64%, 21% 92%, 0 100%, 0% 25%);
+  clip-path: polygon(0 0, 100% 0, 100% 64%, 21% 92%, 0 100%, 0% 25%);
+  background-color: #3AC680;
+  height: 100vh;
+  text-align: center;
+  padding-top: 15vh;
+}
+
+.hero-title, .hero-subtitle, .hero-btn {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 2.7rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+}
+
+.hero-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+}
+
+.hero-btn a {
+  color: #3AC680;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.income, .expenses {
+  height: 100%;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+}
+
+.income-header, .expenses-header {
+  height: 100px;
+  padding-left: 40px;
+}
+
+.income-header {
+  background-color: #3AC680;
+  margin-top: 10vh;
+}
+
+.expenses-header {
+  background-color: #E64A4A;
+}
+
+.header-titles {
+  color: #fff;
+  padding-top: 35px;
+  font-size: 1.7rem;
+}
+
+.block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr;
+      grid-template-columns: 100px 1fr;
+  justify-items: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circle {
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.block-title, .block-amount {
+  color: #292929;
+}
+
+.block-title {
+  padding-right: 15vmax;
+}
+
+#form {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+label, input {
+  display: block;
+}
+
+.label-title {
+  font-size: 1.8rem;
+  padding-bottom: 8px;
+}
+
+#entry, #amount {
+  width: 80%;
+  padding: 7px;
+  margin-bottom: 2vh;
+}
+
+.form-btn {
+  margin-top: 2vh;
+  padding: 6px 26px;
+  background-color: #fff;
+  border-color: lightgray;
+  border-radius: 3px;
+  color: #292929;
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

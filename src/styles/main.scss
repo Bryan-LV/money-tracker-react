@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans&display=swap');
+
+
+$darktext: #292929;
+$lighttext:#fff;
+$green: #3AC680;
+$red: #E64A4A;
+
+*{
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html, body{
+    margin:0;
+    padding:0;
+}
+
+
+// hero section
+
+.hero{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 64%, 21% 92%, 0 100%, 0% 25%);
+    clip-path: polygon(0 0, 100% 0, 100% 64%, 21% 92%, 0 100%, 0% 25%);
+background-color:$green;
+height:100vh;
+text-align: center;
+padding-top: 15vh;
+}
+
+.hero-title, .hero-subtitle, .hero-btn{
+    text-align: center;
+    color:$lighttext;
+}
+
+.hero-title{
+    margin:0;
+    font-size: 2.7rem;
+    font-weight: 800;
+}
+
+.hero-subtitle{
+    font-size: 1.3rem;
+}
+
+.hero-btn{
+    padding:12px 24px;
+    border:none;
+    border-radius: 4px;
+
+    a{
+        color:$green;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+// income and expenses section
+
+.income,.expenses{
+    height:100%;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+.income-header, .expenses-header{
+    height:100px;
+    padding-left:40px;
+}
+
+.income-header{
+    background-color:$green;
+    margin-top: 10vh;
+}
+
+.expenses-header{
+    background-color: $red;
+}
+
+.header-titles{
+    color:$lighttext;
+    padding-top: 35px;
+    font-size: 1.7rem;
+}
+
+// Block component
+
+.block{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    justify-items: left;
+    align-items: center;
+}
+
+.block-info{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.circle{
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.block-title, .block-amount{
+    color:$darktext;
+}
+
+.block-title{
+    padding-right: 15vmax;
+}
+
+// form section
+
+#form{
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+label,input{
+    display: block;
+}
+
+.label-title{
+    font-size: 1.8rem;
+    padding-bottom: 8px;
+}
+
+#entry, #amount{
+    width:80%;
+    padding:7px;
+    margin-bottom: 2vh;
+}
+
+.form-btn{
+    margin-top: 2vh;
+    padding:6px 26px;
+    background-color:#fff;
+    border-color:lightgray;
+    border-radius: 3px;
+    color:$darktext;
+    display: block;
+}
