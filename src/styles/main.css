@@ -84,6 +84,11 @@ html, body {
           align-items: center;
 }
 
+.block-info:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
 .block-info {
   display: -webkit-box;
   display: -ms-flexbox;

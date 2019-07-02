@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './styles/main.css'
 import Form from './components/form'
 import Block from './components/block'
+
 function App() {
   const [income,setIncome] = useState([]);
   const [expenses,setExpenses] = useState([]);
@@ -14,14 +15,28 @@ function App() {
     } 
     else if(entry.incomeBtn){
       const newIncomeSet = setIncome([...income,entry])
-      console.log(`new income set was triggered: ${income}`);
     } 
     else if(entry.expenseBtn) {
       const newExpenseSet = setExpenses([...expenses,entry]);
-      console.log('new expense set was triggered');
     } 
     else {
       console.log('neither one was selected');
+    }
+  }
+
+  const deleteItem = (id,type) => {
+    if(type === 'income'){
+      const filteredIncome = income.filter(item => {
+        return item.id !== id
+      });
+
+      setIncome(filteredIncome);
+    } else{
+      const filteredIncome = expenses.filter(item => {
+        return item.id !== id
+      });
+      
+      setExpenses(filteredIncome);
     }
   }
 
@@ -33,18 +48,25 @@ function App() {
       <Block title={capitalTitle} 
     amount={income.amount} 
     type='income'
-    color={green}/>
+    color={green}
+    id={income.id}
+    key={income.id}
+    delete={deleteItem}/>
     )
   })
 
   const expenseBlocks = expenses.map(expense => {
     const titles = expense.entry;
     const capitalTitle = titles.charAt(0).toUpperCase() + titles.slice(1);
+
     return (
       <Block title={capitalTitle} 
     amount={expense.amount} 
     type='expense'
-    color={red}/>
+    color={red}
+    id={expense.id}
+    key={expense.id}
+    delete={deleteItem}/>
     )
   })
 

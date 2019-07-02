@@ -92,6 +92,11 @@ padding-top: 15vh;
     align-items: center;
 }
 
+.block-info:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
 .block-info{
     display: flex;
     justify-content: space-around;

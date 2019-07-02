@@ -1,18 +1,23 @@
 import React,{useState} from 'react'
+import uuid from 'uuid/v4'
 
 function Form(props) {
     const [entry,setEntry] = useState('');
     const [amount,setAmount] = useState('');
     const [incomeBtn,handleIncomeBtn] = useState(false);
     const [expenseBtn, handleExpenseBtn] = useState(false);
+    const [id,setId] = useState(uuid());
+
     const obj = {
         entry,
         amount,
         incomeBtn,
-        expenseBtn
+        expenseBtn,
+        id
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+        setId(uuid());
         props.newEntry(obj)
     }
 
@@ -27,6 +32,7 @@ function Form(props) {
             value={entry}
             onChange={ e => setEntry(e.target.value)}
             />
+
             <label htmlFor="amount" className="label-title">Amount</label>
             <input type="text"
             placeholder="add an amount"
